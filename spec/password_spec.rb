@@ -12,11 +12,15 @@ describe PasswordGenerator do
   end
   
   it 'should generate capital letters' do
-   expect(passwordgenerator.makeit()).to match(/[A-Z]/)
+   expect(passwordgenerator.makeit()).to match (/[A-Z]/)
   end
   
   it 'should generate numbers' do
    expect(passwordgenerator.makeit).to match (/[0-9]/)
+  end
+  
+  it 'should include !$%&*@^ ' do
+    expect(passwordgenerator.makeit).to match (/[!$%&*@^]/)
   end
   
   it 'should have a default of 15 characters' do
