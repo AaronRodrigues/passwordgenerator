@@ -1,5 +1,7 @@
 # Password Generator
 
+[![Coverage Status](https://coveralls.io/repos/github/AaronRodrigues/passwordgenerator/badge.svg?branch=master)](https://coveralls.io/github/AaronRodrigues/passwordgenerator?branch=master)
+
 ## Developer Test
 
 Create a password generator that, in a language of your choice, will create a secure password.The password generator should have the following signature:String generatePassword(int length, boolean uppercase, boolean lowercase, boolean number, boolean special)(This is java syntax but you should be able extrapolate to your language of choice)
