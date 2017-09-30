@@ -8,18 +8,15 @@ describe PasswordGenerator do
   end
   
   it 'should generate lowercase letters' do
-    allow(passwordgenerator).to receive(:makeit).and_return('abcdefghijkl')
-    expect(passwordgenerator.makeit).to eq ('abcdefghijkl')
+    expect(passwordgenerator.makeit).to match (/[a-z]/)
   end
   
-  it 'should generate uppercase letters' do
-    allow(passwordgenerator).to receive(:makeit).and_return('ABCDEFGHIJKL')
-    expect(passwordgenerator.makeit).to eq ('ABCDEFGHIJKL')
+  it 'should generate capital letters' do
+   expect(passwordgenerator.makeit()).to match(/[A-Z]/)
   end
   
   it 'should generate numbers' do
-    allow(passwordgenerator).to receive(:makeit).and_return('0123456789')
-    expect(passwordgenerator.makeit).to eq ('0123456789')
+   expect(passwordgenerator.makeit).to match (/[0-9]/)
   end
   
   it 'should have a default of 15 characters' do
