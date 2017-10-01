@@ -46,3 +46,56 @@ So that my password requirements are met,
 I would like to know when the password is invalid
 
 ``` 
+
+## Assumptions Made
+
+1. Default length for the password is 15 characters
+2. Minimum Length for the password is 4 characters
+
+   I initially wanted to go through each case for less than 3 characters. This would lead to writing more exception statements in cases such as:
+   length = 2, uppercase = false, lowercase = true, numeric = true, special = true
+   length = 2, uppercase = false, lowercase = false, numeric = true, special = true
+   length = 2, uppercase = false, lowercase = true, numeric = false, special = true
+   length = 2, uppercase = false, lowercase = true, numeric = true, special = false
+   etc
+   I made the assumption that a password would be too insecure if it had less than 4 characters. I did reach out with a question regarding the minimum length for the password. I was told to make an assumption since it is the weekend and the question could not be answered. 
+3. All conditions regarding uppercase, lowercase, numbers and special characters are set to true by default
+
+### Installation
+
+1. Clone this repository by typing the following in the command line.
+   ```
+   git clone git@github.com:AaronRodrigues/passwordgenerator.git
+   ```
+2. Install bundler
+   ```
+   gem install bundler
+   ```
+3. To install dependencies, type:
+   ```
+   bundle install
+   ```
+### Run the Program
+
+1. Open Terminal
+2. Type 
+   ```
+   irb
+   ```
+   This opens the interactive ruby shell
+3. Type
+   ```
+   require './lib/passwordgenerator.rb'
+   ```
+4. You can now create a new Password by typing:
+   ```
+   pass = Password.new
+   password.generate(length= 10, uppercase = true, lowercase = true, special = true)
+   ```
+5. You can also change any of the parameters
+   ```
+   pass = Password.new
+   password.generate(length= 8, uppercase = false, lowercase = true, special = true)
+   ```
+   ![Example](./img/passwordgenerator.png)
+   
