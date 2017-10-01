@@ -53,11 +53,13 @@ I would like to know when the password is invalid
 2. Minimum Length for the password is 4 characters
 
    I initially wanted to go through each case for less than 3 characters. This would lead to writing more exception statements in cases such as:
+   
    length = 2, uppercase = false, lowercase = true, numeric = true, special = true
    length = 2, uppercase = false, lowercase = false, numeric = true, special = true
    length = 2, uppercase = false, lowercase = true, numeric = false, special = true
    length = 2, uppercase = false, lowercase = true, numeric = true, special = false
    etc
+   
    I made the assumption that a password would be too insecure if it had less than 4 characters. I did reach out with a question regarding the minimum length for the password. I was told to make an assumption since it is the weekend and the question could not be answered. 
 3. All conditions regarding uppercase, lowercase, numbers and special characters are set to true by default
 
