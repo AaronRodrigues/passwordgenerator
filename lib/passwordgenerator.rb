@@ -2,11 +2,15 @@ class PasswordGenerator
     
   def makeit(length = 15, uppercase = true, lowercase = true, numeric = true, special = true)
     secret = []
-    secret.concat(create_uppercase_array.shuffle) if uppercase == true
-    secret.concat(create_lowercase_array.shuffle) if lowercase == true
-    secret.concat(create_num_array.shuffle) if numeric == true
-    secret.concat(create_special_array.shuffle) if special == true
+    password = ""
+    while password.length < length do
+    secret.concat(create_uppercase_array.shuffle.take(1)) if uppercase == true
+    secret.concat(create_lowercase_array.shuffle.take(1)) if lowercase == true
+    secret.concat(create_num_array.shuffle.take(1)) if numeric == true
+    secret.concat(create_special_array.shuffle.take(1)) if special == true
     password = secret.shuffle.take(length).join
+    end
+    password
   end
   
   private
