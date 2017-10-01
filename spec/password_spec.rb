@@ -29,4 +29,8 @@ describe PasswordGenerator do
   it 'should raise an error if password length is set to 3 and all options are selected' do
     expect { passwordgenerator.makeit(length = 3, uppercase = true, lowercase = true, numeric = true, special = true) }.to raise_error 'Cannot generate password : Increase password length'
   end
+  
+  it 'should raise an error if password length is set to 0' do
+    expect { passwordgenerator.makeit(length = 0) }.to raise_error 'Password cannot have 0 characters : Increase password length'
+  end
 end
