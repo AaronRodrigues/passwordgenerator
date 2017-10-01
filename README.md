@@ -69,7 +69,7 @@ I would like to know when the password is invalid
    ```
    git clone git@github.com:AaronRodrigues/passwordgenerator.git
    ```
-2. Install bundler
+2. Navigate to the directory and install bundler
    ```
    gem install bundler
    ```
