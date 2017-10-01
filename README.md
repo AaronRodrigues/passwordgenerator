@@ -78,7 +78,8 @@ I would like to know when the password is invalid
    bundle install
    ```
 ### Test Coverage
-    ![Test Coverage](./img/testcoverage.png)
+    
+   ![Test Coverage](./img/testcoverage.png)
 
 1. To run tests, in the Terminal type:
    ```
