@@ -6,4 +6,6 @@ gem 'rubocop'
 group :test do
   gem "rspec"
   gem 'coveralls', require: false
+  gem 'simplecov', require: false
+  gem 'simplecov-console', require: false
 end
