@@ -1,5 +1,5 @@
-class PasswordGenerator
-  def makeit(length = 15, uppercase = true, lowercase = true, numeric = true, special = true)
+class Password
+  def generate(length = 15, uppercase = true, lowercase = true, numeric = true, special = true)
     raise 'Password cannot have 0 characters : Increase password length' if length == 0
     raise 'Cannot generate password : Increase password length' if length < 4 && uppercase == true && lowercase == true && numeric == true && special == true
     secret = []
