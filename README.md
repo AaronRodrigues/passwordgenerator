@@ -77,6 +77,13 @@ I would like to know when the password is invalid
    ```
    bundle install
    ```
+### Test Coverage
+    ![Test Coverage](./img/testcoverage.png)
+
+1. To run tests, in the Terminal type:
+   ```
+   rspec
+   ```
 ### Run the Program
 
 1. Open Terminal
@@ -101,3 +108,6 @@ I would like to know when the password is invalid
    ```
    ![Example](./img/passwordgenerator.png)
    
+### Further improvements
+- Creating an interface for the application
+- After discussion with the team, decide if a max length for the password is necessary and implement it.
