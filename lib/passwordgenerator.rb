@@ -1,6 +1,7 @@
 class PasswordGenerator
     
   def makeit(length = 15, uppercase = true, lowercase = true, numeric = true, special = true)
+    raise 'Cannot generate password : Increase password length' if length == 3 &&  uppercase == true && lowercase == true && numeric == true && special == true
     secret = []
     password = ""
     while password.length < length do
@@ -9,7 +10,7 @@ class PasswordGenerator
     secret.concat(create_num_array.shuffle.take(1)) if numeric == true
     secret.concat(create_special_array.shuffle.take(1)) if special == true
     password = secret.shuffle.take(length).join
-    end
+    end  
     password
   end
   

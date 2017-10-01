@@ -25,4 +25,8 @@ describe PasswordGenerator do
   it 'should have a default of 15 characters' do
     expect(passwordgenerator.makeit.length).to eq 15
   end
+  
+  it 'should raise an error if password length is set to 3 and all options are selected' do
+    expect { passwordgenerator.makeit(length = 3,  uppercase = true, lowercase = true, numeric = true, special = true) }.to raise_error 'Cannot generate password : Increase password length'
+  end
 end

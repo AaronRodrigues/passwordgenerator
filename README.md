@@ -41,4 +41,8 @@ As a user,
 So that I have a secure password,
 I want to be able to include !$%&*@^ in my password
 
+As a user,
+So that my password requirements are met,
+I would like to know when the password is invalid
+
 ``` 
