@@ -4,10 +4,10 @@ class PasswordGenerator
     secret = []
     password = ''
     while password.length < length
-      secret.concat(create_uppercase_array.shuffle.take(1)) if uppercase == true
-      secret.concat(create_lowercase_array.shuffle.take(1)) if lowercase == true
-      secret.concat(create_num_array.shuffle.take(1)) if numeric == true
-      secret.concat(create_special_array.shuffle.take(1)) if special == true
+      secret.concat(create_uppercase_array.shuffle.take(1)) if uppercase 
+      secret.concat(create_lowercase_array.shuffle.take(1)) if lowercase 
+      secret.concat(create_num_array.shuffle.take(1)) if numeric 
+      secret.concat(create_special_array.shuffle.take(1)) if special 
       password = secret.shuffle.take(length).join
     end
     password
