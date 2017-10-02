@@ -7,12 +7,7 @@
 Create a password generator that, in a language of your choice, will create a secure password.The password generator should have the following signature:String generatePassword(int length, boolean uppercase, boolean lowercase, boolean number, boolean special)(This is java syntax but you should be able extrapolate to your language of choice)
 Where:
 length is the length of the returned string
-uppercase    is    whether    to    include    
-
-### Technologies used
-- Ruby 2.4.1
-- Test framework: RSpec
-- Version Control System: GITuppercase characters  A -Z  
+uppercase    is    whether    to    include
 lowercase  is  whether  to  include lowercase  characters  a -z  
 number  is  whether  to include 0 –9
 special is whether to include the following keyboard characters ``!$%&*@^`` 
