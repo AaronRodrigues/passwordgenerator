@@ -7,7 +7,10 @@
 Create a password generator that, in a language of your choice, will create a secure password.The password generator should have the following signature:String generatePassword(int length, boolean uppercase, boolean lowercase, boolean number, boolean special)(This is java syntax but you should be able extrapolate to your language of choice)
 Where:
 length is the length of the returned string
-uppercase    is    whether    to    include    uppercase characters  A -Z  
+uppercase    is    whether    to    include    ### Technologies used
+- Ruby 2.4.1
+- Test framework: RSpec
+- Version Control System: GITuppercase characters  A -Z  
 lowercase  is  whether  to  include lowercase  characters  a -z  
 number  is  whether  to include 0 –9
 special is whether to include the following keyboard characters ``!$%&*@^`` 
@@ -46,22 +49,10 @@ So that my password requirements are met,
 I would like to know when the password is invalid
 
 ``` 
-
-## Assumptions Made
-
-1. Default length for the password is 15 characters
-2. Minimum Length for the password is 4 characters
-
-   I initially wanted to go through each case for less than 3 characters. This would lead to writing more exception statements in cases such as:
-   ```
-   length = 2, uppercase = false, lowercase = true, numeric = true, special = true
-   length = 2, uppercase = false, lowercase = false, numeric = true, special = true
-   length = 2, uppercase = false, lowercase = true, numeric = false, special = true
-   length = 2, uppercase = false, lowercase = true, numeric = true, special = false
-   etc
-   ```
-   I made the assumption that a password would be too insecure if it had less than 4 characters. I did reach out with a question regarding the minimum length for the password. I was told to make an assumption since it is the weekend and the question could not be answered. 
-3. All conditions regarding uppercase, lowercase, numbers and special characters are set to true by default
+### Technologies used
+- Ruby 2.4.1
+- Test framework: RSpec
+- Version Control System: GIT
 
 ### Installation
 
@@ -108,6 +99,22 @@ I would like to know when the password is invalid
    password.generate(length= 8, uppercase = false, lowercase = true, special = true)
    ```
    ![Example](./img/passwordgenerator.png)
+
+### Assumptions Made
+
+   1. Default length for the password is 15 characters
+   2. Minimum Length for the password is 4 characters
+
+      I initially wanted to go through each case for less than 3 characters. This would lead to writing more exception statements in cases such as:
+      ```
+      length = 2, uppercase = false, lowercase = true, numeric = true, special = true
+      length = 2, uppercase = false, lowercase = false, numeric = true, special = true
+      length = 2, uppercase = false, lowercase = true, numeric = false, special = true
+      length = 2, uppercase = false, lowercase = true, numeric = true, special = false
+      etc
+      ```
+      I made the assumption that a password would be too insecure if it had less than 4 characters. I did reach out with a question regarding the minimum length for the password. I was told to make an assumption since it is the weekend and the question could not be answered. 
+   3. All conditions regarding uppercase, lowercase, numbers and special characters are set to true by default
    
 ### Further improvements
 - Creating an interface for the application
