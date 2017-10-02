@@ -95,7 +95,6 @@ I would like to know when the password is invalid
    ```
 5. You can also change any of the parameters
    ```
-   pass = Password.new
    password.generate(length= 8, uppercase = false, lowercase = true, special = true)
    ```
    ![Example](./img/passwordgenerator.png)
